@@ -34,12 +34,12 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.pictureBox_nhanvien = new System.Windows.Forms.PictureBox();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-			this.button1 = new System.Windows.Forms.Button();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.textBox_name = new System.Windows.Forms.TextBox();
+			this.textBox_vitri = new System.Windows.Forms.TextBox();
+			this.textBox_luong = new System.Windows.Forms.TextBox();
+			this.dateTimePicker_ngaysinh = new System.Windows.Forms.DateTimePicker();
+			this.button_browser_image = new System.Windows.Forms.Button();
+			this.dataGridView_nhanvien = new System.Windows.Forms.DataGridView();
 			this.msnv = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +49,7 @@
 			this.button_Sua = new System.Windows.Forms.Button();
 			this.button_Xoa = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_nhanvien)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -106,59 +106,59 @@
 			this.pictureBox_nhanvien.TabIndex = 5;
 			this.pictureBox_nhanvien.TabStop = false;
 			// 
-			// textBox1
+			// textBox_name
 			// 
-			this.textBox1.Location = new System.Drawing.Point(211, 105);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(165, 22);
-			this.textBox1.TabIndex = 6;
+			this.textBox_name.Location = new System.Drawing.Point(211, 105);
+			this.textBox_name.Name = "textBox_name";
+			this.textBox_name.Size = new System.Drawing.Size(165, 22);
+			this.textBox_name.TabIndex = 6;
 			// 
-			// textBox3
+			// textBox_vitri
 			// 
-			this.textBox3.Location = new System.Drawing.Point(211, 210);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(165, 22);
-			this.textBox3.TabIndex = 8;
+			this.textBox_vitri.Location = new System.Drawing.Point(211, 210);
+			this.textBox_vitri.Name = "textBox_vitri";
+			this.textBox_vitri.Size = new System.Drawing.Size(165, 22);
+			this.textBox_vitri.TabIndex = 8;
 			// 
-			// textBox4
+			// textBox_luong
 			// 
-			this.textBox4.Location = new System.Drawing.Point(211, 256);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(165, 22);
-			this.textBox4.TabIndex = 9;
+			this.textBox_luong.Location = new System.Drawing.Point(211, 256);
+			this.textBox_luong.Name = "textBox_luong";
+			this.textBox_luong.Size = new System.Drawing.Size(165, 22);
+			this.textBox_luong.TabIndex = 9;
 			// 
-			// dateTimePicker1
+			// dateTimePicker_ngaysinh
 			// 
-			this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-			this.dateTimePicker1.Location = new System.Drawing.Point(211, 161);
-			this.dateTimePicker1.Name = "dateTimePicker1";
-			this.dateTimePicker1.Size = new System.Drawing.Size(165, 22);
-			this.dateTimePicker1.TabIndex = 10;
+			this.dateTimePicker_ngaysinh.CustomFormat = "dd/MM/yyyy";
+			this.dateTimePicker_ngaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+			this.dateTimePicker_ngaysinh.Location = new System.Drawing.Point(211, 161);
+			this.dateTimePicker_ngaysinh.Name = "dateTimePicker_ngaysinh";
+			this.dateTimePicker_ngaysinh.Size = new System.Drawing.Size(165, 22);
+			this.dateTimePicker_ngaysinh.TabIndex = 10;
 			// 
-			// button1
+			// button_browser_image
 			// 
-			this.button1.Location = new System.Drawing.Point(639, 110);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 38);
-			this.button1.TabIndex = 11;
-			this.button1.Text = "Duyệt";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button_browser_image.Location = new System.Drawing.Point(639, 110);
+			this.button_browser_image.Name = "button_browser_image";
+			this.button_browser_image.Size = new System.Drawing.Size(75, 38);
+			this.button_browser_image.TabIndex = 11;
+			this.button_browser_image.Text = "Duyệt";
+			this.button_browser_image.UseVisualStyleBackColor = true;
 			// 
-			// dataGridView1
+			// dataGridView_nhanvien
 			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+			this.dataGridView_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView_nhanvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.msnv,
             this.name,
             this.ngaysinh,
             this.vitri,
             this.luongtheogio});
-			this.dataGridView1.Location = new System.Drawing.Point(12, 397);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(776, 150);
-			this.dataGridView1.TabIndex = 12;
+			this.dataGridView_nhanvien.Location = new System.Drawing.Point(12, 397);
+			this.dataGridView_nhanvien.Name = "dataGridView_nhanvien";
+			this.dataGridView_nhanvien.RowTemplate.Height = 24;
+			this.dataGridView_nhanvien.Size = new System.Drawing.Size(776, 150);
+			this.dataGridView_nhanvien.TabIndex = 12;
 			// 
 			// msnv
 			// 
@@ -220,12 +220,12 @@
 			this.Controls.Add(this.button_Xoa);
 			this.Controls.Add(this.button_Sua);
 			this.Controls.Add(this.button_Them);
-			this.Controls.Add(this.dataGridView1);
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.dateTimePicker1);
-			this.Controls.Add(this.textBox4);
-			this.Controls.Add(this.textBox3);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.dataGridView_nhanvien);
+			this.Controls.Add(this.button_browser_image);
+			this.Controls.Add(this.dateTimePicker_ngaysinh);
+			this.Controls.Add(this.textBox_luong);
+			this.Controls.Add(this.textBox_vitri);
+			this.Controls.Add(this.textBox_name);
 			this.Controls.Add(this.pictureBox_nhanvien);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label4);
@@ -235,7 +235,7 @@
 			this.Name = "frm_NhanVien";
 			this.Text = "frm_NhanVien";
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_nhanvien)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -249,12 +249,12 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.PictureBox pictureBox_nhanvien;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.DateTimePicker dateTimePicker1;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.TextBox textBox_name;
+		private System.Windows.Forms.TextBox textBox_vitri;
+		private System.Windows.Forms.TextBox textBox_luong;
+		private System.Windows.Forms.DateTimePicker dateTimePicker_ngaysinh;
+		private System.Windows.Forms.Button button_browser_image;
+		private System.Windows.Forms.DataGridView dataGridView_nhanvien;
 		private System.Windows.Forms.DataGridViewTextBoxColumn msnv;
 		private System.Windows.Forms.DataGridViewTextBoxColumn name;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ngaysinh;
