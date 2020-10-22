@@ -18,6 +18,7 @@ namespace QuanLyTiemBanh
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new frm_NguyenLieu());
 //truongaxin
+//leanhtuan
 		}
 	}
 }
