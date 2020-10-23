@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyTiemBanh
 {
-    public partial class frm_KhachHang : Form
+    public partial class frm_DonHang : Form
     {
-        public frm_KhachHang()
+        public frm_DonHang()
         {
             InitializeComponent();
         }
-
     }
-    }
+}

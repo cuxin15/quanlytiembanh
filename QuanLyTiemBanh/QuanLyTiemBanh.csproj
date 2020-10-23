@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_DonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DonHang.Designer.cs">
+      <DependentUpon>frm_DonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_DonHang.resx">
+      <DependentUpon>frm_DonHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_KhachHang.resx">
       <DependentUpon>frm_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,15 +144,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
