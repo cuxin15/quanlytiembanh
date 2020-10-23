@@ -144,6 +144,7 @@
 			this.button_browser_image.TabIndex = 11;
 			this.button_browser_image.Text = "Duyệt";
 			this.button_browser_image.UseVisualStyleBackColor = true;
+			this.button_browser_image.Click += new System.EventHandler(this.button_browser_image_Click);
 			// 
 			// dataGridView_nhanvien
 			// 

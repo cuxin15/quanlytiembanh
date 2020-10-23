@@ -16,5 +16,15 @@ namespace QuanLyTiemBanh
 		{
 			InitializeComponent();
 		}
+
+		private void button_browser_image_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog image_nhanvien = new OpenFileDialog();
+			image_nhanvien.ShowDialog();
+			string path_image = image_nhanvien.FileName;
+			textBox_luong.Text = path_image;
+			pictureBox_nhanvien.Image = Image.FromFile(path_image);
+			pictureBox_nhanvien.SizeMode = PictureBoxSizeMode.AutoSize;
+		}
 	}
 }
