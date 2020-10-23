@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace QuanLyTiemBanh
 {
-	public partial class Form1 : Form
+	public partial class frm_NhanVien : Form
 	{
-		public Form1()
+		public frm_NhanVien()
 		{
 			InitializeComponent();
 		}
