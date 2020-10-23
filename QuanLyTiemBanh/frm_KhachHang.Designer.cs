@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView_QLKhachHang = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_SDT = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txt_DiaChi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_HoTen = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_SDT = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.button_Xoa = new System.Windows.Forms.Button();
             this.button_CapNhat = new System.Windows.Forms.Button();
             this.button_Them = new System.Windows.Forms.Button();
+            this.dataGridView_QLKhachHang = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_QLKhachHang)).BeginInit();
@@ -61,27 +61,34 @@
             this.panel1.Size = new System.Drawing.Size(899, 198);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // label1
             // 
-            this.panel2.Controls.Add(this.button_Xoa);
-            this.panel2.Controls.Add(this.button_CapNhat);
-            this.panel2.Controls.Add(this.button_Them);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 441);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(899, 100);
-            this.panel2.TabIndex = 1;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Location = new System.Drawing.Point(230, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(422, 39);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "QUẢN LÝ KHÁCH HÀNG";
             // 
-            // dataGridView_QLKhachHang
+            // txt_SDT
             // 
-            this.dataGridView_QLKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_QLKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView_QLKhachHang.Location = new System.Drawing.Point(0, 198);
-            this.dataGridView_QLKhachHang.Name = "dataGridView_QLKhachHang";
-            this.dataGridView_QLKhachHang.RowHeadersWidth = 51;
-            this.dataGridView_QLKhachHang.RowTemplate.Height = 24;
-            this.dataGridView_QLKhachHang.Size = new System.Drawing.Size(899, 243);
-            this.dataGridView_QLKhachHang.TabIndex = 19;
+            this.txt_SDT.Location = new System.Drawing.Point(687, 85);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.Size = new System.Drawing.Size(169, 22);
+            this.txt_SDT.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Location = new System.Drawing.Point(546, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 20);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Số điện thoại";
             // 
             // txt_DiaChi
             // 
@@ -119,39 +126,21 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Họ tên";
             // 
-            // txt_SDT
+            // panel2
             // 
-            this.txt_SDT.Location = new System.Drawing.Point(687, 85);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(169, 22);
-            this.txt_SDT.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(546, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 20);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Số điện thoại";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.Location = new System.Drawing.Point(230, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(422, 39);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "QUẢN LÝ KHÁCH HÀNG";
+            this.panel2.Controls.Add(this.button_Xoa);
+            this.panel2.Controls.Add(this.button_CapNhat);
+            this.panel2.Controls.Add(this.button_Them);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 441);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(899, 100);
+            this.panel2.TabIndex = 1;
             // 
             // button_Xoa
             // 
             this.button_Xoa.Cursor = System.Windows.Forms.Cursors.No;
-            this.button_Xoa.Location = new System.Drawing.Point(602, 31);
+            this.button_Xoa.Location = new System.Drawing.Point(602, 27);
             this.button_Xoa.Name = "button_Xoa";
             this.button_Xoa.Size = new System.Drawing.Size(120, 46);
             this.button_Xoa.TabIndex = 24;
@@ -161,7 +150,7 @@
             // button_CapNhat
             // 
             this.button_CapNhat.Cursor = System.Windows.Forms.Cursors.No;
-            this.button_CapNhat.Location = new System.Drawing.Point(374, 31);
+            this.button_CapNhat.Location = new System.Drawing.Point(374, 27);
             this.button_CapNhat.Name = "button_CapNhat";
             this.button_CapNhat.Size = new System.Drawing.Size(120, 46);
             this.button_CapNhat.TabIndex = 23;
@@ -171,12 +160,23 @@
             // button_Them
             // 
             this.button_Them.Cursor = System.Windows.Forms.Cursors.No;
-            this.button_Them.Location = new System.Drawing.Point(140, 31);
+            this.button_Them.Location = new System.Drawing.Point(140, 27);
             this.button_Them.Name = "button_Them";
             this.button_Them.Size = new System.Drawing.Size(120, 46);
             this.button_Them.TabIndex = 22;
             this.button_Them.Text = "Thêm";
             this.button_Them.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView_QLKhachHang
+            // 
+            this.dataGridView_QLKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_QLKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_QLKhachHang.Location = new System.Drawing.Point(0, 198);
+            this.dataGridView_QLKhachHang.Name = "dataGridView_QLKhachHang";
+            this.dataGridView_QLKhachHang.RowHeadersWidth = 51;
+            this.dataGridView_QLKhachHang.RowTemplate.Height = 24;
+            this.dataGridView_QLKhachHang.Size = new System.Drawing.Size(899, 243);
+            this.dataGridView_QLKhachHang.TabIndex = 19;
             // 
             // frm_KhachHang
             // 
