@@ -102,7 +102,8 @@
 			this.pictureBox_nhanvien.BackColor = System.Drawing.SystemColors.ActiveBorder;
 			this.pictureBox_nhanvien.Location = new System.Drawing.Point(472, 110);
 			this.pictureBox_nhanvien.Name = "pictureBox_nhanvien";
-			this.pictureBox_nhanvien.Size = new System.Drawing.Size(143, 163);
+			this.pictureBox_nhanvien.Size = new System.Drawing.Size(161, 195);
+			this.pictureBox_nhanvien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox_nhanvien.TabIndex = 5;
 			this.pictureBox_nhanvien.TabStop = false;
 			// 
