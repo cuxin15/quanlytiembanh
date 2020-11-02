@@ -20,12 +20,8 @@ namespace QuanLyTiemBanh
 
 		private void button_login_Click(object sender, EventArgs e)
 		{
-			string strcnn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\truon\source\repos\QuanLyTiemBanh\QuanLyTiemBanh\Database1.mdf;Integrated Security=True";
-			SqlConnection conn = new SqlConnection(strcnn);
-			conn.Open();
-			string strcmm = string.Format("Select COUNT(*) from THONGTINTAIKHOA where taikhoa='{0}' AND matkhau='{1}'",textBox1.Text, textBox2.Text);
-			SqlCommand cmm = new SqlCommand(strcmm, conn);
-			int ex = (int) cmm.ExecuteScalar();
+			GenericDatabase genericDatabase = new GenericDatabase();
+			int ex = (int)genericDatabase.NonQuerySQL(string.Format("Select COUNT(*) from THONGTINTAIKHOA where taikhoan='{0}' AND matkhau='{1}'", textBox_TaiKhoan.Text, textBox_MatKhau.Text));
 			if (ex == 1)
 			{
 				button_login.Text = "Dang nhap thanh cong";

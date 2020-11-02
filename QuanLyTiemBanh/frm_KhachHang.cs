@@ -17,5 +17,9 @@ namespace QuanLyTiemBanh
             InitializeComponent();
         }
 
+        private void button_Them_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }

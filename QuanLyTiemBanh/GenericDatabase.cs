@@ -22,6 +22,7 @@ namespace QuanLyTiemBanh
 			SqlCommand command = new SqlCommand(sql, this.connection);
 			connection.Open();
 			int output = command.ExecuteNonQuery();
+			connection.Close();
 			return output;
 		}
 
