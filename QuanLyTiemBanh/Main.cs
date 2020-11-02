@@ -16,5 +16,61 @@ namespace QuanLyTiemBanh
 		{
 			InitializeComponent();
 		}
+
+		private void khachhangToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (Application.OpenForms["frm_KhachHang"] == null)
+			{
+				frm_KhachHang kh = new frm_KhachHang();
+				kh.MdiParent = this;
+				kh.Show();
+			}
+			else
+			{
+				Application.OpenForms["frm_KhachHang"].Activate();
+			}
+		}
+
+		private void nhanvienToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (Application.OpenForms["frm_NhanVien"] == null)
+			{
+				frm_NhanVien nv = new frm_NhanVien();
+				nv.MdiParent = this;
+				nv.Show();
+			}
+			else
+			{
+				Application.OpenForms["frm_NhanVien"].Activate();
+			}
+		}
+
+		private void nguyenlieuToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (Application.OpenForms["frm_NguyenLieu"] == null)
+			{
+				frm_NguyenLieu nv = new frm_NguyenLieu();
+				nv.MdiParent = this;
+				nv.Show();
+			}
+			else
+			{
+				Application.OpenForms["frm_NguyenLieu"].Activate();
+			}
+		}
+
+		private void danhmucsanphamToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (Application.OpenForms["frm_DanhMuc"] == null)
+			{
+				frm_DanhMuc nv = new frm_DanhMuc();
+				nv.MdiParent = this;
+				nv.Show();
+			}
+			else
+			{
+				Application.OpenForms["frm_DanhMuc"].Activate();
+			}
+		}
 	}
 }
