@@ -41,6 +41,8 @@
             this.button_CapNhat = new System.Windows.Forms.Button();
             this.button_Them = new System.Windows.Forms.Button();
             this.dataGridView_QLKhachHang = new System.Windows.Forms.DataGridView();
+            this.txt_MaKhachHang = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_QLKhachHang)).BeginInit();
@@ -48,6 +50,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txt_MaKhachHang);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txt_SDT);
             this.panel1.Controls.Add(this.label4);
@@ -92,7 +96,7 @@
             // 
             // txt_DiaChi
             // 
-            this.txt_DiaChi.Location = new System.Drawing.Point(120, 136);
+            this.txt_DiaChi.Location = new System.Drawing.Point(687, 135);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Size = new System.Drawing.Size(169, 22);
             this.txt_DiaChi.TabIndex = 19;
@@ -102,7 +106,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(18, 136);
+            this.label3.Location = new System.Drawing.Point(585, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 18;
@@ -110,7 +114,7 @@
             // 
             // txt_HoTen
             // 
-            this.txt_HoTen.Location = new System.Drawing.Point(120, 85);
+            this.txt_HoTen.Location = new System.Drawing.Point(161, 135);
             this.txt_HoTen.Name = "txt_HoTen";
             this.txt_HoTen.Size = new System.Drawing.Size(169, 22);
             this.txt_HoTen.TabIndex = 17;
@@ -120,7 +124,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(18, 85);
+            this.label2.Location = new System.Drawing.Point(59, 135);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 16;
@@ -146,6 +150,7 @@
             this.button_Xoa.TabIndex = 24;
             this.button_Xoa.Text = "Xóa";
             this.button_Xoa.UseVisualStyleBackColor = true;
+            this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click);
             // 
             // button_CapNhat
             // 
@@ -156,6 +161,7 @@
             this.button_CapNhat.TabIndex = 23;
             this.button_CapNhat.Text = "Cập nhật";
             this.button_CapNhat.UseVisualStyleBackColor = true;
+            this.button_CapNhat.Click += new System.EventHandler(this.button_CapNhat_Click);
             // 
             // button_Them
             // 
@@ -178,6 +184,26 @@
             this.dataGridView_QLKhachHang.RowTemplate.Height = 24;
             this.dataGridView_QLKhachHang.Size = new System.Drawing.Size(899, 243);
             this.dataGridView_QLKhachHang.TabIndex = 19;
+            this.dataGridView_QLKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_QLKhachHang_CellClick);
+            // 
+            // txt_MaKhachHang
+            // 
+            this.txt_MaKhachHang.Location = new System.Drawing.Point(161, 83);
+            this.txt_MaKhachHang.Name = "txt_MaKhachHang";
+            this.txt_MaKhachHang.ReadOnly = true;
+            this.txt_MaKhachHang.Size = new System.Drawing.Size(169, 22);
+            this.txt_MaKhachHang.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label5.Location = new System.Drawing.Point(20, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(122, 20);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Mã khách hàng";
             // 
             // frm_KhachHang
             // 
@@ -189,6 +215,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frm_KhachHang";
             this.Text = "Quản lý khách hàng";
+            this.Load += new System.EventHandler(this.frm_KhachHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -212,5 +239,7 @@
         private System.Windows.Forms.Button button_Xoa;
         private System.Windows.Forms.Button button_CapNhat;
         private System.Windows.Forms.Button button_Them;
+        private System.Windows.Forms.TextBox txt_MaKhachHang;
+        private System.Windows.Forms.Label label5;
     }
 }
