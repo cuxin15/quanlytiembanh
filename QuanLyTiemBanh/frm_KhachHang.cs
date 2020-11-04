@@ -20,7 +20,7 @@ namespace QuanLyTiemBanh
 
         private void button_Them_Click(object sender, EventArgs e)
         {
-            string query = string.Format("insert into KhachHang values('{0}','{1}',{2})",txt_HoTen.Text,txt_SDT.Text,txt_DiaChi.Text);
+            string query = string.Format("insert into KhachHang values('{0}','{1}','{2}')",txt_HoTen.Text,txt_SDT.Text,txt_DiaChi.Text);
             int result = genericDatabase.NonQuerySQL(query);
             if (result >= 1)
                 MessageBox.Show("Thêm thành công");
@@ -32,7 +32,7 @@ namespace QuanLyTiemBanh
         private void frm_KhachHang_Load(object sender, EventArgs e)
         {
             string query = "select * from KhachHang";
-            genericDatabase.LoadTable(query);
+            dataGridView_QLKhachHang.DataSource = genericDatabase.LoadTable(query);
         }
 
         private void dataGridView_QLKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -45,7 +45,7 @@ namespace QuanLyTiemBanh
 
         private void button_CapNhat_Click(object sender, EventArgs e)
         {
-            string query = string.Format("update KhachHang set HOTEN ='{0},SDT ='{1},DIACHI ='{2}'",txt_HoTen.Text,txt_SDT.Text,txt_DiaChi.Text);
+            string query = string.Format("update KhachHang set HOTEN ='{0}',SDT ='{1}',DIACHI ='{2}' where MAKHACHHANG = {3}",txt_HoTen.Text,txt_SDT.Text,txt_DiaChi.Text,int.Parse(txt_MaKhachHang.Text));
             int result = genericDatabase.NonQuerySQL(query);
             if (result >= 1)
                 MessageBox.Show("Cập nhật thành công");
