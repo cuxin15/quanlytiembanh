@@ -10,11 +10,20 @@ namespace QuanLyTiemBanh
 {
 	class GenericDatabase
 	{
-		string connect_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\truon\source\repos\QuanLyTiemBanh\QuanLyTiemBanh\Database1.mdf;Integrated Security=True";
+		string connect_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\truon\source\repos\quanlytiembanh2\QuanLyTiemBanh\Database1.mdf;Integrated Security=True";
 		SqlConnection connection;
 		public GenericDatabase()
 		{
 			connection = new SqlConnection(connect_string);
+		}
+
+		public object QuerySQL(string sql)
+		{
+			SqlCommand command = new SqlCommand(sql, this.connection);
+			connection.Open();
+			object output = command.ExecuteScalar();
+			connection.Close();
+			return output;
 		}
 
 		public int NonQuerySQL(string sql)
