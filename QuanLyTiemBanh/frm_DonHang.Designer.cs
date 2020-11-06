@@ -42,6 +42,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox_NhanVien = new System.Windows.Forms.ComboBox();
             this.textBox_SDTKH = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox_TenKH = new System.Windows.Forms.TextBox();
@@ -63,7 +64,7 @@
             this.button_HuyHoaDon = new System.Windows.Forms.Button();
             this.button_CapNhatHD = new System.Windows.Forms.Button();
             this.button_TaoHoaDon = new System.Windows.Forms.Button();
-            this.comboBox_NhanVien = new System.Windows.Forms.ComboBox();
+            this.btn_ChonBanh = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DonHang)).BeginInit();
@@ -83,6 +84,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_ChonBanh);
             this.groupBox1.Controls.Add(this.button_ThanhToan);
             this.groupBox1.Controls.Add(this.textBox_TienCoc);
             this.groupBox1.Controls.Add(this.label19);
@@ -230,6 +232,14 @@
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chung";
+            // 
+            // comboBox_NhanVien
+            // 
+            this.comboBox_NhanVien.FormattingEnabled = true;
+            this.comboBox_NhanVien.Location = new System.Drawing.Point(783, 133);
+            this.comboBox_NhanVien.Name = "comboBox_NhanVien";
+            this.comboBox_NhanVien.Size = new System.Drawing.Size(169, 24);
+            this.comboBox_NhanVien.TabIndex = 43;
             // 
             // textBox_SDTKH
             // 
@@ -446,13 +456,16 @@
             this.button_TaoHoaDon.UseVisualStyleBackColor = true;
             this.button_TaoHoaDon.Click += new System.EventHandler(this.button_TaoHoaDon_Click);
             // 
-            // comboBox_NhanVien
+            // btn_ChonBanh
             // 
-            this.comboBox_NhanVien.FormattingEnabled = true;
-            this.comboBox_NhanVien.Location = new System.Drawing.Point(783, 133);
-            this.comboBox_NhanVien.Name = "comboBox_NhanVien";
-            this.comboBox_NhanVien.Size = new System.Drawing.Size(169, 24);
-            this.comboBox_NhanVien.TabIndex = 43;
+            this.btn_ChonBanh.Cursor = System.Windows.Forms.Cursors.No;
+            this.btn_ChonBanh.Location = new System.Drawing.Point(16, 317);
+            this.btn_ChonBanh.Name = "btn_ChonBanh";
+            this.btn_ChonBanh.Size = new System.Drawing.Size(120, 46);
+            this.btn_ChonBanh.TabIndex = 61;
+            this.btn_ChonBanh.Text = "Chọn bánh";
+            this.btn_ChonBanh.UseVisualStyleBackColor = true;
+            this.btn_ChonBanh.Click += new System.EventHandler(this.btn_ChonBanh_Click);
             // 
             // frm_DonHang
             // 
@@ -517,5 +530,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button button_TimHoaDon;
         private System.Windows.Forms.ComboBox comboBox_NhanVien;
+        private System.Windows.Forms.Button btn_ChonBanh;
     }
 }

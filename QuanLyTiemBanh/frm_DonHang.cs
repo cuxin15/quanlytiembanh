@@ -18,6 +18,10 @@ namespace QuanLyTiemBanh
             InitializeComponent();
         }
 
+        public void LoadDataGrid(DataTable dt)
+        {
+            dataGridView_DonHang.DataSource = dt;
+        }
         public void Load_Combo()
         {
             comboBox_KhachHang.DataSource = genericDatabase.LoadTable("select * from KhachHang");
@@ -56,6 +60,12 @@ namespace QuanLyTiemBanh
                 int soluong = int.Parse(dataGridView_DonHang.Rows[i].Cells["soluong"].ToString());
                 string query2 = string.Format("insert into ChiTietDonHang values({0},{1},{2})", msdh, msb, soluong);
             }
+        }
+
+        private void btn_ChonBanh_Click(object sender, EventArgs e)
+        {
+            frm_ChonBanh formBanh = new frm_ChonBanh(this);
+            formBanh.Show();
         }
     }
 }
