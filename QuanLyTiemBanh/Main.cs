@@ -33,6 +33,39 @@ namespace QuanLyTiemBanh
 
 		private void nhanvienToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+
+		}
+
+		private void danhmucsanphamToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (Application.OpenForms["frm_DanhMuc"] == null)
+			{
+				frm_ChonBanh nv = new frm_ChonBanh();
+				nv.MdiParent = this;
+				nv.Show();
+			}
+			else
+			{
+				Application.OpenForms["frm_DanhMuc"].Activate();
+			}
+		}
+
+		private void khachHangToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (Application.OpenForms["frm_KhachHang"] == null)
+			{
+				frm_KhachHang kh = new frm_KhachHang();
+				kh.MdiParent = this;
+				kh.Show();
+			}
+			else
+			{
+				Application.OpenForms["frm_KhachHang"].Activate();
+			}
+		}
+
+		private void nhanVienToolStripMenuItem_Click_1(object sender, EventArgs e)
+		{
 			if (Application.OpenForms["frm_NhanVien"] == null)
 			{
 				frm_NhanVien nv = new frm_NhanVien();
@@ -45,25 +78,25 @@ namespace QuanLyTiemBanh
 			}
 		}
 
-		private void nguyenlieuToolStripMenuItem_Click(object sender, EventArgs e)
+		private void donHangToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if (Application.OpenForms["frm_NguyenLieu"] == null)
+			if (Application.OpenForms["frm_DonHang"] == null)
 			{
-				frm_NguyenLieu nv = new frm_NguyenLieu();
+				frm_DonHang nv = new frm_DonHang();
 				nv.MdiParent = this;
 				nv.Show();
 			}
 			else
 			{
-				Application.OpenForms["frm_NguyenLieu"].Activate();
+				Application.OpenForms["frm_DonHang"].Activate();
 			}
 		}
 
-		private void danhmucsanphamToolStripMenuItem_Click(object sender, EventArgs e)
+		private void danhMucSanPhamToolStripMenuItem_Click_1(object sender, EventArgs e)
 		{
 			if (Application.OpenForms["frm_DanhMuc"] == null)
 			{
-				frm_DanhMuc nv = new frm_DanhMuc();
+				frm_ChonBanh nv = new frm_ChonBanh();
 				nv.MdiParent = this;
 				nv.Show();
 			}
