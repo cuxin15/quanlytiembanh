@@ -101,9 +101,10 @@ namespace QuanLyTiemBanh
 
 		}
 
-		private DataTable buttonOK_Click(object sender, EventArgs e)
+		private void buttonOK_Click(object sender, EventArgs e)
 		{
-			return new DataTable();
+			this.parent.LoadDataGrid(tableBanh);
+			Close();
 		}
 	}
 }
