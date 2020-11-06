@@ -31,7 +31,11 @@ namespace QuanLyTiemBanh
 
         private void frm_DonHang_Load(object sender, EventArgs e)
         {
-            Load_Combo();
+			// TODO: This line of code loads data into the 'database1DataSet3.NHANVIEN' table. You can move, or remove it, as needed.
+			this.nHANVIENTableAdapter.Fill(this.database1DataSet3.NHANVIEN);
+			// TODO: This line of code loads data into the 'database1DataSet2.KhachHang' table. You can move, or remove it, as needed.
+			this.khachHangTableAdapter.Fill(this.database1DataSet2.KhachHang);
+			Load_Combo();
         }
 
         private void comboBox_KhachHang_SelectedIndexChanged(object sender, EventArgs e)

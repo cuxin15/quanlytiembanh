@@ -36,20 +36,6 @@ namespace QuanLyTiemBanh
 
 		}
 
-		private void danhmucsanphamToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			if (Application.OpenForms["frm_DanhMuc"] == null)
-			{
-				frm_ChonBanh nv = new frm_ChonBanh();
-				nv.MdiParent = this;
-				nv.Show();
-			}
-			else
-			{
-				Application.OpenForms["frm_DanhMuc"].Activate();
-			}
-		}
-
 		private void khachHangToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			if (Application.OpenForms["frm_KhachHang"] == null)
