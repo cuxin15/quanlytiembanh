@@ -72,6 +72,12 @@
 			this.database1DataSet3 = new QuanLyTiemBanh.Database1DataSet3();
 			this.nHANVIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.nHANVIENTableAdapter = new QuanLyTiemBanh.Database1DataSet3TableAdapters.NHANVIENTableAdapter();
+			this.database1DataSet4 = new QuanLyTiemBanh.Database1DataSet4();
+			this.nHANVIENBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+			this.nHANVIENTableAdapter1 = new QuanLyTiemBanh.Database1DataSet4TableAdapters.NHANVIENTableAdapter();
+			this.database1DataSet5 = new QuanLyTiemBanh.Database1DataSet5();
+			this.nHANVIENBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+			this.nHANVIENTableAdapter2 = new QuanLyTiemBanh.Database1DataSet5TableAdapters.NHANVIENTableAdapter();
 			this.panel2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_DonHang)).BeginInit();
@@ -82,6 +88,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.database1DataSet5)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel2
@@ -257,7 +267,7 @@
 			// 
 			// comboBox_NhanVien
 			// 
-			this.comboBox_NhanVien.DataSource = this.nHANVIENBindingSource;
+			this.comboBox_NhanVien.DataSource = this.nHANVIENBindingSource2;
 			this.comboBox_NhanVien.DisplayMember = "HOTEN";
 			this.comboBox_NhanVien.FormattingEnabled = true;
 			this.comboBox_NhanVien.Location = new System.Drawing.Point(783, 133);
@@ -512,6 +522,34 @@
 			// 
 			this.nHANVIENTableAdapter.ClearBeforeFill = true;
 			// 
+			// database1DataSet4
+			// 
+			this.database1DataSet4.DataSetName = "Database1DataSet4";
+			this.database1DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// nHANVIENBindingSource1
+			// 
+			this.nHANVIENBindingSource1.DataMember = "NHANVIEN";
+			this.nHANVIENBindingSource1.DataSource = this.database1DataSet4;
+			// 
+			// nHANVIENTableAdapter1
+			// 
+			this.nHANVIENTableAdapter1.ClearBeforeFill = true;
+			// 
+			// database1DataSet5
+			// 
+			this.database1DataSet5.DataSetName = "Database1DataSet5";
+			this.database1DataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// nHANVIENBindingSource2
+			// 
+			this.nHANVIENBindingSource2.DataMember = "NHANVIEN";
+			this.nHANVIENBindingSource2.DataSource = this.database1DataSet5;
+			// 
+			// nHANVIENTableAdapter2
+			// 
+			this.nHANVIENTableAdapter2.ClearBeforeFill = true;
+			// 
 			// frm_DonHang
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -537,6 +575,10 @@
 			((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.database1DataSet5)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource2)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -586,5 +628,11 @@
 		private Database1DataSet3 database1DataSet3;
 		private System.Windows.Forms.BindingSource nHANVIENBindingSource;
 		private Database1DataSet3TableAdapters.NHANVIENTableAdapter nHANVIENTableAdapter;
+		private Database1DataSet4 database1DataSet4;
+		private System.Windows.Forms.BindingSource nHANVIENBindingSource1;
+		private Database1DataSet4TableAdapters.NHANVIENTableAdapter nHANVIENTableAdapter1;
+		private Database1DataSet5 database1DataSet5;
+		private System.Windows.Forms.BindingSource nHANVIENBindingSource2;
+		private Database1DataSet5TableAdapters.NHANVIENTableAdapter nHANVIENTableAdapter2;
 	}
 }

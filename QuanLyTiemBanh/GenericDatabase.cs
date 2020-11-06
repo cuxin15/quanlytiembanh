@@ -28,6 +28,7 @@ namespace QuanLyTiemBanh
 
 		public int NonQuerySQL(string sql)
 		{
+			string sqlok = sql;
 			SqlCommand command = new SqlCommand(sql, this.connection);
 			connection.Open();
 			int output = command.ExecuteNonQuery();
