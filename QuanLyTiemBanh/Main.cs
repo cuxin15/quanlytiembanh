@@ -77,5 +77,19 @@ namespace QuanLyTiemBanh
 				Application.OpenForms["frm_DonHang"].Activate();
 			}
 		}
+
+		private void danhMucSanPhamToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (Application.OpenForms["frm_DanhMuc"] == null)
+			{
+				frm_DanhMuc nv = new frm_DanhMuc();
+				nv.MdiParent = this;
+				nv.Show();
+			}
+			else
+			{
+				Application.OpenForms["frm_DanhMuc"].Activate();
+			}
+		}
 	}
 }

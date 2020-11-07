@@ -93,6 +93,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Database1DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database1DataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frm_BanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +109,12 @@
     </Compile>
     <Compile Include="frm_ChonBanh.Designer.cs">
       <DependentUpon>frm_ChonBanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DanhMuc.Designer.cs">
+      <DependentUpon>frm_DanhMuc.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_DonHang.cs">
       <SubType>Form</SubType>
@@ -143,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ChonBanh.resx">
       <DependentUpon>frm_ChonBanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DanhMuc.resx">
+      <DependentUpon>frm_DanhMuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DonHang.resx">
       <DependentUpon>frm_DonHang.cs</DependentUpon>
@@ -233,6 +247,17 @@
     </None>
     <None Include="Database1DataSet5.xss">
       <DependentUpon>Database1DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet6.xsc">
+      <DependentUpon>Database1DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Database1DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Database1DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database1DataSet6.xss">
+      <DependentUpon>Database1DataSet6.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

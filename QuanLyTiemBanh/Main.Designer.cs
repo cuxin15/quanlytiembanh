@@ -84,6 +84,7 @@
 			this.danhMucSanPhamToolStripMenuItem.Name = "danhMucSanPhamToolStripMenuItem";
 			this.danhMucSanPhamToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
 			this.danhMucSanPhamToolStripMenuItem.Text = "Danh mục sản phẩm";
+			this.danhMucSanPhamToolStripMenuItem.Click += new System.EventHandler(this.danhMucSanPhamToolStripMenuItem_Click);
 			// 
 			// Main
 			// 

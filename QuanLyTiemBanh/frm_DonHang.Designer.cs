@@ -64,7 +64,6 @@
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
-			this.comboBox_MaHoaDon = new System.Windows.Forms.ComboBox();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.button_TimHoaDon = new System.Windows.Forms.Button();
 			this.button_HuyHoaDon = new System.Windows.Forms.Button();
@@ -78,6 +77,11 @@
 			this.nHANVIENBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
 			this.nHANVIENTableAdapter1 = new QuanLyTiemBanh.Database1DataSet4TableAdapters.NHANVIENTableAdapter();
 			this.nHANVIENTableAdapter2 = new QuanLyTiemBanh.Database1DataSet5TableAdapters.NHANVIENTableAdapter();
+			this.database1DataSet6 = new QuanLyTiemBanh.Database1DataSet6();
+			this.dONHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.dONHANGTableAdapter = new QuanLyTiemBanh.Database1DataSet6TableAdapters.DONHANGTableAdapter();
+			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.textBoxMaHoaDon = new System.Windows.Forms.TextBox();
 			this.panel2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_DonHang)).BeginInit();
@@ -92,6 +96,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.database1DataSet6)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dONHANGBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panel2
@@ -451,21 +457,13 @@
 			this.label6.TabIndex = 31;
 			this.label6.Text = "Tìm hóa đơn";
 			// 
-			// comboBox_MaHoaDon
-			// 
-			this.comboBox_MaHoaDon.FormattingEnabled = true;
-			this.comboBox_MaHoaDon.Location = new System.Drawing.Point(744, 23);
-			this.comboBox_MaHoaDon.Name = "comboBox_MaHoaDon";
-			this.comboBox_MaHoaDon.Size = new System.Drawing.Size(169, 24);
-			this.comboBox_MaHoaDon.TabIndex = 32;
-			// 
 			// panel3
 			// 
+			this.panel3.Controls.Add(this.textBoxMaHoaDon);
 			this.panel3.Controls.Add(this.button_TimHoaDon);
 			this.panel3.Controls.Add(this.button_HuyHoaDon);
 			this.panel3.Controls.Add(this.button_CapNhatHD);
 			this.panel3.Controls.Add(this.button_TaoHoaDon);
-			this.panel3.Controls.Add(this.comboBox_MaHoaDon);
 			this.panel3.Controls.Add(this.label6);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.panel3.Location = new System.Drawing.Point(0, 698);
@@ -482,6 +480,7 @@
 			this.button_TimHoaDon.TabIndex = 61;
 			this.button_TimHoaDon.Text = "Tìm kiếm";
 			this.button_TimHoaDon.UseVisualStyleBackColor = true;
+			this.button_TimHoaDon.Click += new System.EventHandler(this.button_TimHoaDon_Click);
 			// 
 			// button_HuyHoaDon
 			// 
@@ -550,6 +549,33 @@
 			// 
 			this.nHANVIENTableAdapter2.ClearBeforeFill = true;
 			// 
+			// database1DataSet6
+			// 
+			this.database1DataSet6.DataSetName = "Database1DataSet6";
+			this.database1DataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// dONHANGBindingSource
+			// 
+			this.dONHANGBindingSource.DataMember = "DONHANG";
+			this.dONHANGBindingSource.DataSource = this.database1DataSet6;
+			// 
+			// dONHANGTableAdapter
+			// 
+			this.dONHANGTableAdapter.ClearBeforeFill = true;
+			// 
+			// contextMenuStrip1
+			// 
+			this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+			this.contextMenuStrip1.Name = "contextMenuStrip1";
+			this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+			// 
+			// textBoxMaHoaDon
+			// 
+			this.textBoxMaHoaDon.Location = new System.Drawing.Point(738, 23);
+			this.textBoxMaHoaDon.Name = "textBoxMaHoaDon";
+			this.textBoxMaHoaDon.Size = new System.Drawing.Size(175, 22);
+			this.textBoxMaHoaDon.TabIndex = 62;
+			// 
 			// frm_DonHang
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -579,6 +605,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.database1DataSet6)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dONHANGBindingSource)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -605,7 +633,6 @@
         private System.Windows.Forms.ComboBox comboBox_KhachHang;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox_MaHoaDon;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker_NgayNhan;
         private System.Windows.Forms.Label label5;
@@ -634,5 +661,10 @@
 		private Database1DataSet5 database1DataSet5;
 		private System.Windows.Forms.BindingSource nHANVIENBindingSource2;
 		private Database1DataSet5TableAdapters.NHANVIENTableAdapter nHANVIENTableAdapter2;
+		private Database1DataSet6 database1DataSet6;
+		private System.Windows.Forms.BindingSource dONHANGBindingSource;
+		private Database1DataSet6TableAdapters.DONHANGTableAdapter dONHANGTableAdapter;
+		private System.Windows.Forms.TextBox textBoxMaHoaDon;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 	}
 }

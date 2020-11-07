@@ -22,11 +22,6 @@ namespace QuanLyTiemBanh
 			InitializeComponent();
 			DataColumn column;
 			column = new DataColumn();
-			//tableBanh.Columns.Add("MSB", typeof(int));
-			//tableBanh.Columns.Add("TENBANH", typeof(string));
-			//tableBanh.Columns.Add("GIA", typeof(int));
-			//tableBanh.Columns.Add("SOLUONG", typeof(int));
-
 
 			column.DataType = typeof(int);
 			column.ColumnName = "MSB";
@@ -137,10 +132,6 @@ namespace QuanLyTiemBanh
 			Close();
 		}
 
-		private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
-		}
 
 		private void dataGridView_danhmuc_CellClick(object sender, DataGridViewCellEventArgs e)
 		{
@@ -171,9 +162,5 @@ namespace QuanLyTiemBanh
 			textBoxSoluong.Text = "";
 		}
 
-		private void buttonSua_Click(object sender, EventArgs e)
-		{
-
-		}
 	}
 }
