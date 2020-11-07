@@ -53,7 +53,18 @@ namespace QuanLyTiemBanh
 
         private void button_ThanhToan_Click(object sender, EventArgs e)
         {
-
+            float giamgia = float.Parse(textBox_GiamGia.Text);
+            float tientratruoc = float.Parse(textBox_TienCoc.Text);
+            float tongtien = 0;
+            int msdh = (int)genericDatabase.QuerySQL("select max(msdh) from DonHang");
+            for (int i = 0; i < tb.Rows.Count; i++)
+            {
+                int gia = int.Parse(tb.Rows[i]["GIA"].ToString());
+                int soluong = int.Parse(tb.Rows[i]["SOLUONG"].ToString());
+                tongtien += (gia*soluong);
+            }
+            textBox_TongTien.Text = "" + tongtien;
+            textBox_SoTienConLai.Text = "" + (tongtien - tientratruoc);
         }
 
         private void button_TaoHoaDon_Click(object sender, EventArgs e)
