@@ -33,7 +33,7 @@ namespace QuanLyTiemBanh
 
 		private void nhanvienToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-
+            
 		}
 
 		private void khachHangToolStripMenuItem_Click(object sender, EventArgs e)
