@@ -53,9 +53,25 @@ namespace QuanLyTiemBanh
 
         private void button_ThanhToan_Click(object sender, EventArgs e)
         {
-            float giamgia = float.Parse(textBox_GiamGia.Text);
-            float tientratruoc = float.Parse(textBox_TienCoc.Text);
-            float tongtien = 0;
+			float giamgia, tientratruoc;
+			float tongtien = 0;
+			if (textBox_GiamGia.Text == "")
+			{
+				giamgia = 0;
+			}
+			else
+			{
+				giamgia = float.Parse(textBox_GiamGia.Text);
+			}
+
+			if (textBox_TienCoc.Text == "")
+			{
+				tientratruoc = 0;
+			}
+			else
+			{
+				tientratruoc = float.Parse(textBox_TienCoc.Text);
+			}
             int msdh = (int)genericDatabase.QuerySQL("select max(msdh) from DonHang");
             for (int i = 0; i < tb.Rows.Count; i++)
             {

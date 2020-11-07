@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLyTiemBanh
 {
@@ -19,10 +20,37 @@ namespace QuanLyTiemBanh
 		public frm_ChonBanh(frm_DonHang parent)
 		{
 			InitializeComponent();
-			tableBanh.Columns.Add("MSB", typeof(int));
-			tableBanh.Columns.Add("TENBANH", typeof(string));
-			tableBanh.Columns.Add("GIA", typeof(int));
-			tableBanh.Columns.Add("SOLUONG", typeof(int));
+			DataColumn column;
+			column = new DataColumn();
+			//tableBanh.Columns.Add("MSB", typeof(int));
+			//tableBanh.Columns.Add("TENBANH", typeof(string));
+			//tableBanh.Columns.Add("GIA", typeof(int));
+			//tableBanh.Columns.Add("SOLUONG", typeof(int));
+
+
+			column.DataType = typeof(int);
+			column.ColumnName = "MSB";
+			tableBanh.Columns.Add(column);
+			var key = new DataColumn[1];
+			key[0] = column;
+
+			column = new DataColumn();
+			column.DataType = typeof(string);
+			column.ColumnName = "TENBANH";
+			tableBanh.Columns.Add(column);
+
+			column = new DataColumn();
+			column.DataType = typeof(int);
+			column.ColumnName = "GIA";
+			tableBanh.Columns.Add(column);
+
+			column = new DataColumn();
+			column.DataType = typeof(int);
+			column.ColumnName = "SOLUONG";
+			tableBanh.Columns.Add(column);
+
+			tableBanh.PrimaryKey = key;
+
 			this.parent = parent;
 		}
 
@@ -38,32 +66,32 @@ namespace QuanLyTiemBanh
 
 		private void buttonThems_Click(object sender, EventArgs e)
 		{
-			int masobanh = (int) comboBoxBanh.SelectedValue;
-			String tenbanh = comboBoxBanh.GetItemText(comboBoxBanh.SelectedItem);
-			int soluong = int.Parse(textBoxSoluong.Text.ToString());
-			int giaBanh = this.giaBanh(masobanh);
-
-			if (tableBanh.Rows.Count > 0)
+			if (textBoxSoluong.Text == "")
 			{
-				int tontai = isExistBanh(masobanh);
-				if (tontai != -1)
-				{
-					tableBanh.Rows[tontai].SetField(1, tenbanh);
-					tableBanh.Rows[tontai].SetField(2, giaBanh);
-					tableBanh.Rows[tontai].SetField(3, soluong);
-					dataGridView_danhmuc.DataSource = tableBanh;
-					return;
-				}
-				else
-				{
-					tableBanh.Rows.Add(masobanh, tenbanh, giaBanh, soluong);
-					dataGridView_danhmuc.DataSource = tableBanh;
-				}
+				MessageBox.Show("Vui lòng nhập số lượng");
 			}
 			else
 			{
-				tableBanh.Rows.Add(masobanh, tenbanh, giaBanh, soluong);
-				dataGridView_danhmuc.DataSource = tableBanh;
+				DataRow row = ((DataRowView)listBoxBanh.SelectedItem).Row;
+				if (tableBanh.Rows.Contains(row["MSB"]))
+				{
+					foreach (DataRow dr in tableBanh.Rows) // search whole table
+					{
+						if (dr["TENBANH"].ToString() == listBoxBanh.GetItemText(listBoxBanh.SelectedItem)) // if id==2
+						{
+							dr["SOLUONG"] = int.Parse(textBoxSoluong.Text);
+							break;
+						}
+					}
+					dataGridView_danhmuc.DataSource = tableBanh;
+					textBoxSoluong.Text = "";
+				}
+				else
+				{
+					tableBanh.Rows.Add(row["MSB"], row["TENBANH"], row["GIA"], int.Parse(textBoxSoluong.Text));
+					dataGridView_danhmuc.DataSource = tableBanh;
+					textBoxSoluong.Text = "";
+				}
 			}
 		}
 
@@ -96,15 +124,56 @@ namespace QuanLyTiemBanh
 
 		private void frm_ChonBanh_Load(object sender, EventArgs e)
 		{
-			// TODO: This line of code loads data into the 'database1DataSet1.DANHMUCBANH' table. You can move, or remove it, as needed.
-			this.dANHMUCBANHTableAdapter1.Fill(this.database1DataSet1.DANHMUCBANH);
-
+			string sql = "select * from DANHMUCBANH";
+			DataTable tb = genericDatabase.LoadTable(sql);
+			listBoxBanh.DataSource = tb;
+			listBoxBanh.DisplayMember = "TENBANH";
+			listBoxBanh.ValueMember = "MSB";
 		}
 
 		private void buttonOK_Click(object sender, EventArgs e)
 		{
 			this.parent.LoadDataGrid(tableBanh);
 			Close();
+		}
+
+		private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void dataGridView_danhmuc_CellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			textBoxSoluong.Text = dataGridView_danhmuc.CurrentRow.Cells["SOLUONG"].Value.ToString();
+			string selectedItem = dataGridView_danhmuc.CurrentRow.Cells["TENBANH"].Value.ToString();
+			for (int i = 0; i < listBoxBanh.Items.Count; i++)
+			{
+				if (listBoxBanh.GetItemText(listBoxBanh.Items[i]) == selectedItem)
+				{
+					listBoxBanh.SetSelected(i, true);
+					break;
+				}
+			}
+		}
+
+		private void buttonXoa_Click(object sender, EventArgs e)
+		{
+			string tenbanh = dataGridView_danhmuc.CurrentRow.Cells["TENBANH"].Value.ToString();
+			foreach (DataRow orow in tableBanh.Select())
+			{
+				if (orow["TENBANH"].ToString().Equals(tenbanh))
+				{
+					tableBanh.Rows.Remove(orow);
+				}
+			}
+			tableBanh.AcceptChanges();
+			dataGridView_danhmuc.DataSource = tableBanh;
+			textBoxSoluong.Text = "";
+		}
+
+		private void buttonSua_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
