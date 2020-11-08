@@ -25,30 +25,26 @@ namespace QuanLyTiemBanh
 			String tennhanvien = textBox_name.Text;
 			String vitri = textBox_vitri.Text;
 			int luong = int.Parse(textBox_luong.Text);
-            String sql = String.Format("Insert into NHANVIEN values('{0}','{1}','{2}')",tennhanvien,vitri,luong);
-			int result = genericDatabase.NonQuerySQL(sql);
-            if (result >0)
+            if (textBox_luong.Text =="" || textBox_name.Text == "" || textBox_vitri.Text == "")
             {
-				MessageBox.Show("Luu thanh cong");
-				frm_NhanVien_Load(null, null);
-			}
+				MessageBox.Show("Khong duoc de trong");
+            }
             else
             {
-				MessageBox.Show("Them that bai");
-            }
-			
+				String sql = String.Format("Insert into NHANVIEN values('{0}','{1}','{2}')", tennhanvien, vitri, luong);
+				int result = genericDatabase.NonQuerySQL(sql);
+				if (result > 0)
+				{
+					MessageBox.Show("Luu thanh cong");
+					frm_NhanVien_Load(null, null);
+				}
+				else
+				{
+					MessageBox.Show("Them that bai");
+				}
+			}
         }
 
-        private void pictureBox_nhanvien_Click(object sender, EventArgs e)
-        {
-			OpenFileDialog open = new OpenFileDialog();
-			open.Title = "Hãy chọn ảnh ";
-			open.Filter = "PNG|*.png|JPG|*.jpg|Tất cả|*.*";
-			if (open.ShowDialog() == DialogResult.OK)
-			{
-				pictureBox_nhanvien.Image = Image.FromFile(open.FileName);
-			}
-		}
 
         private void frm_NhanVien_Load(object sender, EventArgs e)
         {
