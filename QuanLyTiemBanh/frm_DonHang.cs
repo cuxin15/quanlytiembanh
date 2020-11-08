@@ -23,7 +23,36 @@ namespace QuanLyTiemBanh
         {
 			this.tb = d;
             dataGridView_DonHang.DataSource = d;
-        }
+			float giamgia, tientratruoc;
+			float tongtien = 0;
+			if (textBox_GiamGia.Text == "")
+			{
+				giamgia = 0;
+			}
+			else
+			{
+				giamgia = float.Parse(textBox_GiamGia.Text);
+			}
+
+			if (textBox_TienCoc.Text == "")
+			{
+				tientratruoc = 0;
+			}
+			else
+			{
+				tientratruoc = float.Parse(textBox_TienCoc.Text);
+			}
+			//int msdh = (int)genericDatabase.QuerySQL("select max(msdh) from DonHang");
+			for (int i = 0; i < d.Rows.Count; i++)
+			{
+				int gia = int.Parse(d.Rows[i]["GIA"].ToString());
+				int soluong = int.Parse(d.Rows[i]["SOLUONG"].ToString());
+				tongtien += (gia * soluong);
+			}
+			textBox_TongTien.Text = "" + tongtien;
+			textBox_SoTienConLai.Text = "" + (tongtien - tientratruoc);
+
+		}
         public void Load_Combo()
         {
             comboBox_KhachHang.DataSource = genericDatabase.LoadTable("select * from KhachHang");
