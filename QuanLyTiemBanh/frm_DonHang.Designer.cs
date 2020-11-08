@@ -63,9 +63,7 @@
 			this.dateTimePicker_NgayDat = new System.Windows.Forms.DateTimePicker();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
-			this.label6 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
-			this.button_TimHoaDon = new System.Windows.Forms.Button();
 			this.button_HuyHoaDon = new System.Windows.Forms.Button();
 			this.button_CapNhatHD = new System.Windows.Forms.Button();
 			this.button_TaoHoaDon = new System.Windows.Forms.Button();
@@ -81,7 +79,6 @@
 			this.dONHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.dONHANGTableAdapter = new QuanLyTiemBanh.Database1DataSet6TableAdapters.DONHANGTableAdapter();
 			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-			this.textBoxMaHoaDon = new System.Windows.Forms.TextBox();
 			this.panel2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_DonHang)).BeginInit();
@@ -446,41 +443,16 @@
 			this.label1.Text = "HÓA ĐƠN BÁN HÀNG";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// label6
-			// 
-			this.label6.AutoSize = true;
-			this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-			this.label6.Location = new System.Drawing.Point(630, 23);
-			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(101, 20);
-			this.label6.TabIndex = 31;
-			this.label6.Text = "Tìm hóa đơn";
-			// 
 			// panel3
 			// 
-			this.panel3.Controls.Add(this.textBoxMaHoaDon);
-			this.panel3.Controls.Add(this.button_TimHoaDon);
 			this.panel3.Controls.Add(this.button_HuyHoaDon);
 			this.panel3.Controls.Add(this.button_CapNhatHD);
 			this.panel3.Controls.Add(this.button_TaoHoaDon);
-			this.panel3.Controls.Add(this.label6);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.panel3.Location = new System.Drawing.Point(0, 698);
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(1076, 69);
 			this.panel3.TabIndex = 22;
-			// 
-			// button_TimHoaDon
-			// 
-			this.button_TimHoaDon.Cursor = System.Windows.Forms.Cursors.No;
-			this.button_TimHoaDon.Location = new System.Drawing.Point(919, 21);
-			this.button_TimHoaDon.Name = "button_TimHoaDon";
-			this.button_TimHoaDon.Size = new System.Drawing.Size(120, 27);
-			this.button_TimHoaDon.TabIndex = 61;
-			this.button_TimHoaDon.Text = "Tìm kiếm";
-			this.button_TimHoaDon.UseVisualStyleBackColor = true;
-			this.button_TimHoaDon.Click += new System.EventHandler(this.button_TimHoaDon_Click);
 			// 
 			// button_HuyHoaDon
 			// 
@@ -495,9 +467,9 @@
 			// button_CapNhatHD
 			// 
 			this.button_CapNhatHD.Cursor = System.Windows.Forms.Cursors.No;
-			this.button_CapNhatHD.Location = new System.Drawing.Point(224, 11);
+			this.button_CapNhatHD.Location = new System.Drawing.Point(201, 11);
 			this.button_CapNhatHD.Name = "button_CapNhatHD";
-			this.button_CapNhatHD.Size = new System.Drawing.Size(120, 46);
+			this.button_CapNhatHD.Size = new System.Drawing.Size(143, 46);
 			this.button_CapNhatHD.TabIndex = 26;
 			this.button_CapNhatHD.Text = "Cập nhật hóa đơn";
 			this.button_CapNhatHD.UseVisualStyleBackColor = true;
@@ -569,13 +541,6 @@
 			this.contextMenuStrip1.Name = "contextMenuStrip1";
 			this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
 			// 
-			// textBoxMaHoaDon
-			// 
-			this.textBoxMaHoaDon.Location = new System.Drawing.Point(738, 23);
-			this.textBoxMaHoaDon.Name = "textBoxMaHoaDon";
-			this.textBoxMaHoaDon.Size = new System.Drawing.Size(175, 22);
-			this.textBoxMaHoaDon.TabIndex = 62;
-			// 
 			// frm_DonHang
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -600,7 +565,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.database1DataSet2)).EndInit();
 			this.panel3.ResumeLayout(false);
-			this.panel3.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.nHANVIENBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).EndInit();
@@ -633,7 +597,6 @@
         private System.Windows.Forms.ComboBox comboBox_KhachHang;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker_NgayNhan;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker_NgayDat;
@@ -646,7 +609,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox_SoTienConLai;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button_TimHoaDon;
         private System.Windows.Forms.ComboBox comboBox_NhanVien;
         private System.Windows.Forms.Button btn_ChonBanh;
 		private Database1DataSet2 database1DataSet2;
@@ -664,7 +626,6 @@
 		private Database1DataSet6 database1DataSet6;
 		private System.Windows.Forms.BindingSource dONHANGBindingSource;
 		private Database1DataSet6TableAdapters.DONHANGTableAdapter dONHANGTableAdapter;
-		private System.Windows.Forms.TextBox textBoxMaHoaDon;
 		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
 	}
 }
