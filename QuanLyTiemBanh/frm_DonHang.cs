@@ -140,31 +140,15 @@ namespace QuanLyTiemBanh
             formBanh.Show();
         }
 
-		private void button_TimHoaDon_Click(object sender, EventArgs e)
-		{
-			if (textBoxMaHoaDon.Text == "")
-			{
-				MessageBox.Show("Vui lòng nhập mã hoá đơn");
-			}
-			else
-			{
-				string mahoadon = textBoxMaHoaDon.Text;
-				string sql = string.Format("select count(msdh) from DONHANG where msdh={0}", mahoadon);
-				int tontai = (int) genericDatabase.QuerySQL(sql);
-				if (tontai==1)
-				{
-					//string sqlDonhang = string.Format("select * from DONHANG where msdh={0}", mahoadon);
-					//string khachhang
-					//DataTable donhang = genericDatabase.LoadTable(sqlDonhang);
-					//string makhachhang = donhang.Rows[0]["mskh"].ToString();
-					//comboBox_KhachHang.SelectedIndex = comboBox_KhachHang.FindString(makhachhang);
-					//textBox_TenKH.Text = donhang.Rows[0]["mskh"].ToString();
-				}
-				else
-				{
-					MessageBox.Show("Không tồn tại hoá đơn cần tìm");
-				}
-			}
+
+        private void textBox_GiamGia_TextChanged(object sender, EventArgs e)
+        {
+			textBox_TongTien.Text = ""+(int.Parse(textBox_TongTien.Text) * (int.Parse(textBox_GiamGia.Text) / 100));
 		}
-	}
+
+        private void textBox_TienCoc_TextChanged(object sender, EventArgs e)
+        {
+			textBox_SoTienConLai.Text = "" + (int.Parse(textBox_TongTien.Text) - int.Parse(textBox_TienCoc.Text));
+		}
+    }
 }

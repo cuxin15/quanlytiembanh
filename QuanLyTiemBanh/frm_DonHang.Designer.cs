@@ -154,6 +154,7 @@
             this.textBox_TienCoc.Name = "textBox_TienCoc";
             this.textBox_TienCoc.Size = new System.Drawing.Size(169, 22);
             this.textBox_TienCoc.TabIndex = 59;
+            this.textBox_TienCoc.TextChanged += new System.EventHandler(this.textBox_TienCoc_TextChanged);
             // 
             // label19
             // 
@@ -222,6 +223,7 @@
             this.textBox_GiamGia.Name = "textBox_GiamGia";
             this.textBox_GiamGia.Size = new System.Drawing.Size(169, 22);
             this.textBox_GiamGia.TabIndex = 51;
+            this.textBox_GiamGia.TextChanged += new System.EventHandler(this.textBox_GiamGia_TextChanged);
             // 
             // label15
             // 
