@@ -25,8 +25,7 @@ namespace QuanLyTiemBanh
 			String tennhanvien = textBox_name.Text;
 			String vitri = textBox_vitri.Text;
 			int luong = int.Parse(textBox_luong.Text);
-			DateTime birthday = dateTimePicker_ngaysinh.Value;
-            String sql = String.Format("Insert into NHANVIEN values('{0}',{1},'{2}',{3})",tennhanvien,birthday,vitri,luong);
+            String sql = String.Format("Insert into NHANVIEN values('{0}','{1}','{2}')",tennhanvien,vitri,luong);
 			int result = genericDatabase.NonQuerySQL(sql);
             if (result >0)
             {
@@ -59,9 +58,8 @@ namespace QuanLyTiemBanh
         private void dataGridView_nhanvien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 			textBox_name.Text = dataGridView_nhanvien.CurrentRow.Cells["HOTEN"].Value.ToString();
-			textBox_luong.Text = dataGridView_nhanvien.CurrentRow.Cells["LUONG"].Value.ToString();
+			textBox_luong.Text = dataGridView_nhanvien.CurrentRow.Cells["LUONGTHEOGIO"].Value.ToString();
 			textBox_vitri.Text = dataGridView_nhanvien.CurrentRow.Cells["VITRI"].Value.ToString();
-			dateTimePicker_ngaysinh.Value = DateTime.Parse(dataGridView_nhanvien.CurrentRow.Cells["NGAYSINH"].Value.ToString());
 		}
 
         private void button_Sua_Click(object sender, EventArgs e)
@@ -69,9 +67,8 @@ namespace QuanLyTiemBanh
 			String tennhanvien = textBox_name.Text;
 			String vitri = textBox_vitri.Text;
 			int luong = int.Parse(textBox_luong.Text);
-			DateTime birthday = dateTimePicker_ngaysinh.Value;
 			int msnv = int.Parse(dataGridView_nhanvien.CurrentRow.Cells["MSNV"].Value.ToString());
-			String sql = String.Format("update NHANVIEN values HOTEN = '{0}',NGAYSINH = {1},VITRI = '{2}',LUONGTHEOGIO = {3} where MSNV = {4}", tennhanvien, birthday, vitri, luong, msnv);
+			String sql = String.Format("update NHANVIEN values HOTEN = '{0}',VITRI = '{1}',LUONGTHEOGIO = {2} where MSNV = {3}", tennhanvien, vitri, luong, msnv);
 			int result = genericDatabase.NonQuerySQL(sql);
 			if (result > 0)
 			{

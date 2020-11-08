@@ -32,7 +32,6 @@
 			this.khachHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.nhanVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.donHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.nguyenLieuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.danhMucSanPhamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
@@ -44,7 +43,6 @@
             this.khachHangToolStripMenuItem,
             this.nhanVienToolStripMenuItem,
             this.donHangToolStripMenuItem,
-            this.nguyenLieuToolStripMenuItem,
             this.danhMucSanPhamToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
@@ -73,17 +71,12 @@
 			this.donHangToolStripMenuItem.Text = "Đơn hàng";
 			this.donHangToolStripMenuItem.Click += new System.EventHandler(this.donHangToolStripMenuItem_Click);
 			// 
-			// nguyenLieuToolStripMenuItem
-			// 
-			this.nguyenLieuToolStripMenuItem.Name = "nguyenLieuToolStripMenuItem";
-			this.nguyenLieuToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
-			this.nguyenLieuToolStripMenuItem.Text = "Nguyên liệu";
-			// 
 			// danhMucSanPhamToolStripMenuItem
 			// 
 			this.danhMucSanPhamToolStripMenuItem.Name = "danhMucSanPhamToolStripMenuItem";
 			this.danhMucSanPhamToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
 			this.danhMucSanPhamToolStripMenuItem.Text = "Danh mục sản phẩm";
+			this.danhMucSanPhamToolStripMenuItem.Click += new System.EventHandler(this.danhMucSanPhamToolStripMenuItem_Click);
 			// 
 			// Main
 			// 
@@ -109,7 +102,6 @@
 		private System.Windows.Forms.ToolStripMenuItem khachHangToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem nhanVienToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem donHangToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem nguyenLieuToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem danhMucSanPhamToolStripMenuItem;
 	}
 }

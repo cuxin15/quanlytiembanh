@@ -33,6 +33,8 @@ namespace QuanLyTiemBanh
 
         private void frm_DonHang_Load(object sender, EventArgs e)
         {
+			// TODO: This line of code loads data into the 'database1DataSet6.DONHANG' table. You can move, or remove it, as needed.
+			this.dONHANGTableAdapter.Fill(this.database1DataSet6.DONHANG);
 			// TODO: This line of code loads data into the 'database1DataSet5.NHANVIEN' table. You can move, or remove it, as needed.
 			this.nHANVIENTableAdapter2.Fill(this.database1DataSet5.NHANVIEN);
 			// TODO: This line of code loads data into the 'database1DataSet4.NHANVIEN' table. You can move, or remove it, as needed.
@@ -53,9 +55,25 @@ namespace QuanLyTiemBanh
 
         private void button_ThanhToan_Click(object sender, EventArgs e)
         {
-            float giamgia = float.Parse(textBox_GiamGia.Text);
-            float tientratruoc = float.Parse(textBox_TienCoc.Text);
-            float tongtien = 0;
+			float giamgia, tientratruoc;
+			float tongtien = 0;
+			if (textBox_GiamGia.Text == "")
+			{
+				giamgia = 0;
+			}
+			else
+			{
+				giamgia = float.Parse(textBox_GiamGia.Text);
+			}
+
+			if (textBox_TienCoc.Text == "")
+			{
+				tientratruoc = 0;
+			}
+			else
+			{
+				tientratruoc = float.Parse(textBox_TienCoc.Text);
+			}
             int msdh = (int)genericDatabase.QuerySQL("select max(msdh) from DonHang");
             for (int i = 0; i < tb.Rows.Count; i++)
             {
@@ -92,5 +110,32 @@ namespace QuanLyTiemBanh
             frm_ChonBanh formBanh = new frm_ChonBanh(this);
             formBanh.Show();
         }
-    }
+
+		private void button_TimHoaDon_Click(object sender, EventArgs e)
+		{
+			if (textBoxMaHoaDon.Text == "")
+			{
+				MessageBox.Show("Vui lòng nhập mã hoá đơn");
+			}
+			else
+			{
+				string mahoadon = textBoxMaHoaDon.Text;
+				string sql = string.Format("select count(msdh) from DONHANG where msdh={0}", mahoadon);
+				int tontai = (int) genericDatabase.QuerySQL(sql);
+				if (tontai==1)
+				{
+					//string sqlDonhang = string.Format("select * from DONHANG where msdh={0}", mahoadon);
+					//string khachhang
+					//DataTable donhang = genericDatabase.LoadTable(sqlDonhang);
+					//string makhachhang = donhang.Rows[0]["mskh"].ToString();
+					//comboBox_KhachHang.SelectedIndex = comboBox_KhachHang.FindString(makhachhang);
+					//textBox_TenKH.Text = donhang.Rows[0]["mskh"].ToString();
+				}
+				else
+				{
+					MessageBox.Show("Không tồn tại hoá đơn cần tìm");
+				}
+			}
+		}
+	}
 }
