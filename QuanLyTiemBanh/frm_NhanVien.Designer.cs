@@ -33,7 +33,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox_nhanvien = new System.Windows.Forms.PictureBox();
             this.textBox_name = new System.Windows.Forms.TextBox();
             this.textBox_vitri = new System.Windows.Forms.TextBox();
             this.textBox_luong = new System.Windows.Forms.TextBox();
@@ -42,7 +41,6 @@
             this.button_Them = new System.Windows.Forms.Button();
             this.button_Sua = new System.Windows.Forms.Button();
             this.button_Xoa = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_nhanvien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,17 +89,6 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Lương theo giờ";
             // 
-            // pictureBox_nhanvien
-            // 
-            this.pictureBox_nhanvien.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pictureBox_nhanvien.Location = new System.Drawing.Point(472, 110);
-            this.pictureBox_nhanvien.Name = "pictureBox_nhanvien";
-            this.pictureBox_nhanvien.Size = new System.Drawing.Size(161, 195);
-            this.pictureBox_nhanvien.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_nhanvien.TabIndex = 5;
-            this.pictureBox_nhanvien.TabStop = false;
-            this.pictureBox_nhanvien.Click += new System.EventHandler(this.pictureBox_nhanvien_Click);
-            // 
             // textBox_name
             // 
             this.textBox_name.Location = new System.Drawing.Point(211, 105);
@@ -131,6 +118,7 @@
             this.dateTimePicker_ngaysinh.Name = "dateTimePicker_ngaysinh";
             this.dateTimePicker_ngaysinh.Size = new System.Drawing.Size(165, 22);
             this.dateTimePicker_ngaysinh.TabIndex = 10;
+            this.dateTimePicker_ngaysinh.Value = new System.DateTime(2020, 11, 8, 7, 14, 44, 0);
             // 
             // dataGridView_nhanvien
             // 
@@ -186,7 +174,6 @@
             this.Controls.Add(this.textBox_luong);
             this.Controls.Add(this.textBox_vitri);
             this.Controls.Add(this.textBox_name);
-            this.Controls.Add(this.pictureBox_nhanvien);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -195,7 +182,6 @@
             this.Name = "frm_NhanVien";
             this.Text = "frm_NhanVien";
             this.Load += new System.EventHandler(this.frm_NhanVien_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_nhanvien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_nhanvien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -209,7 +195,6 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.PictureBox pictureBox_nhanvien;
 		private System.Windows.Forms.TextBox textBox_name;
 		private System.Windows.Forms.TextBox textBox_vitri;
 		private System.Windows.Forms.TextBox textBox_luong;
