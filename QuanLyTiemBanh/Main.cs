@@ -15,6 +15,8 @@ namespace QuanLyTiemBanh
 		public Main()
 		{
 			InitializeComponent();
+			Login lg = new Login();
+			lg.ShowDialog();
 		}
 
 		private void khachhangToolStripMenuItem_Click(object sender, EventArgs e)
