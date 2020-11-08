@@ -139,5 +139,16 @@ namespace QuanLyTiemBanh
             frm_ChonBanh formBanh = new frm_ChonBanh(this);
             formBanh.Show();
         }
-	}
+
+
+        private void textBox_GiamGia_TextChanged(object sender, EventArgs e)
+        {
+			textBox_TongTien.Text = ""+(int.Parse(textBox_TongTien.Text) * (int.Parse(textBox_GiamGia.Text) / 100));
+		}
+
+        private void textBox_TienCoc_TextChanged(object sender, EventArgs e)
+        {
+			textBox_SoTienConLai.Text = "" + (int.Parse(textBox_TongTien.Text) - int.Parse(textBox_TienCoc.Text));
+		}
+    }
 }
